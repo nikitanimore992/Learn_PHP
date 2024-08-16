@@ -23,6 +23,6 @@
         </li>       
       </ul>
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestiae quae tempore? Harum ipsa quisquam culpa, veniam architecto commodi deserunt at praesentium molestiae quod laudantium adipisci voluptas. Explicabo, unde nemo?</p>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestiae quae tempore? Harum ipsa quisquam culpa, veniam architecto commodi deserunt at praesentium molestiae quod laudantium adipisci voluptas. Explicabo, unde nemo?</p> -->
   </div>
 </nav>
