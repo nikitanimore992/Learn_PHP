@@ -21,36 +21,6 @@
  <div id="mydata">
     <h1> Welcome To My Home Page</h1>
 
-    <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">NAME</th>
-      <th scope="col">DEPARTMENT</th>
-      <th scope="col">Salary</th>
-     
-    </tr>
-  </thead>
-  <tbody>
- </div>
-
- <?php 
-    $con= new mysqli("localhost", "root", "", "employee");
-    $sql="select * from cybrom";
-    $result=$con->query($sql);
-     while( $row=$result->fetch_assoc())
-     {
-        echo "<tr>";
-         echo "<td>".$row["empid"]."</td>";
-         echo "<td>".$row["empname"]."</td>";
-         echo "<td>".$row["empdept"]."</td>";
-         echo "<td>".$row["sal"]."</td>";
-        echo "</tr>";
-     } 
-     $con->close();
-?>
-  </tbody>
-    </table>
  </div>
  
 <?php 

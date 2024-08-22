@@ -1,3 +1,13 @@
+<?php 
+if (isset($_POST["submit"]))
+{
+  $id=$_POST["eid"];
+  $name=$_POST["nm"];
+  $dept=$_POST["dept"];
+  $sal=$_POST["sl"];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +30,46 @@ require "include/TopNavbar.php"
   <h1>
     This is my insert data page 
   </h1>
+  <?php
+ if (isset($_POST["submit"]))
+ {
+
+  $con=new mysqli("localhost", "root", "", "employee");
+
+  $sql="insert into cybrom(empid,	empname , empdept , sal)  
+  values('$id', '$name', '$dept', '$sal') ";
+  $con->query($sql);
+  $con->close();
+
+  echo "<script>";
+  echo "alert('Record Save!!!')";
+  echo "</script>";
+ }
+
+   
+?>
+
+<form method="post" action="insert.php">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter employee id</label>
+    <input type="text" class="form-control" name="rno" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter employee name</label>
+    <input type="text" class="form-control" name="nm" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter employee department</label>
+    <input type="text" class="form-control" name="ct" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter employee salary</label>
+    <input type="text" class="form-control" name="fs" aria-describedby="emailHelp">
+  </div>
+  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
 </div>
 
 </div>
