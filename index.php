@@ -36,7 +36,7 @@
 
  <?php 
     $con= new mysqli("localhost", "root", "", "employee");
-    $sql="select *  from cybrom";
+    $sql="select * from cybrom";
     $result=$con->query($sql);
      while( $row=$result->fetch_assoc())
      {
