@@ -28,6 +28,7 @@
       <th scope="col">NAME</th>
       <th scope="col">DEPARTMENT</th>
       <th scope="col">Salary</th>
+     
     </tr>
   </thead>
   <tbody>
