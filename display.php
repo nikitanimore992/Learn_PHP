@@ -42,6 +42,14 @@ require "include/TopNavbar.php"
 </thead>
 <tbody>
 
+<?php 
+$con = new mysqli("localhost","root","","bhopal");
+$sql = "select * from employee";
+$result = $con->query($sql);
+
+
+?>
+
 </tbody>
 </table>
 
