@@ -46,8 +46,15 @@ require "include/TopNavbar.php"
 $con = new mysqli("localhost","root","","bhopal");
 $sql = "select * from employee";
 $result = $con->query($sql);
-
-
+while($eow=$result->fetch_assoc()){
+  echo "<tr>";
+  echo "<td>".$row["empno"]."</td>";
+  echo "<td>".$row["name"]."</td>";
+  echo "<td>".$row["email"]."</td>";
+  echo "<td>".$row["sal"]."</td>";
+  echo "</tr>";
+}
+$con->close();
 ?>
 
 </tbody>
